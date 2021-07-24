@@ -1,0 +1,25 @@
+<script>
+//Faça um sistema que leia as 3 notas de um aluno e calcule a média final deste aluno. Considerar que a média é ponderada e que o peso das notas é: 2,3 e 5, respectivamente
+
+    
+    var aluno = prompt("Insira o nome do Aluno")
+    var nota1 = parseFloat(prompt("Qual o valor da Primeira Nota?")); // peso 2
+    var nota2 = parseFloat(prompt("Qual o valor da Segunda Nota?")); // peso 3
+    var nota3 = parseFloat(prompt("Qual o valor da Terceira Nota?")); // peso 5
+
+    var mediaP = (nota1*2) + (nota2*3) + (nota3*5)
+    var mediaP = mediaP/(2+3+5)
+
+    alert("A Média Ponderada de " + aluno + " é " + mediaP)
+        if(mediaP >= 6){
+            alert("***APROVADO***")
+        }else{
+            alert("***REPROVADO***")
+        }
+    document.write("A Média Ponderada de " + aluno + " é " + mediaP + "<br><br><br>")
+    if(mediaP >= 6){
+            document.write("***ALUNO "+ aluno + " APROVADO***")
+        }else{
+            document.write("***ALUNO " + aluno + " REPROVADO***")
+        }
+</script>

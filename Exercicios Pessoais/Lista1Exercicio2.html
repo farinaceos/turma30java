@@ -1,0 +1,22 @@
+<h1>Calculadora Dias Inversa</h1>
+<br>
+<br>
+
+<script>
+
+//Faça um sistema que leia a idade de uma pessoa expressa em dias e mostre-a expressa em anos, meses e dias.
+
+
+function pulaLinha(){
+    document.write("<br><br>")
+}
+
+
+var dias = parseInt(prompt("Quantos dias você já viveu?"));
+var anos = parseInt(dias/365)
+var meses = parseInt((dias%365)/30)
+var diasFinal = parseFloat((dias%365)%30)
+
+document.write("Se você tem " + dias + " dias de vida, isso significa que você viveu " + anos + " anos, " + meses + " meses e " + diasFinal + " dias!")
+
+</script>

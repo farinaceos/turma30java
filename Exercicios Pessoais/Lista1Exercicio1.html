@@ -1,0 +1,24 @@
+<h1> Vamos ver quantos dias você tem de vida? </h1>
+
+    <br>
+    <br>
+
+<script>
+
+    //Faça um sistema que leia a idade de uma pessoa expressa em anos, meses e dias e mostre-a expressa apenas em dias
+
+    var anos = parseInt(prompt("Quantos anos você tem?"));
+    var meses = parseInt(prompt("E quantos meses?"));
+    var dias = parseInt(prompt("Pra finalzar, quantos dias?"));
+    var total
+    
+    total = (anos*365) + (meses*30) + dias
+
+    document.write("Você tem " + total + " dias de vida! <br><br>")
+        if(total >= 9000){
+            document.write("Já tá no grupo de risco hein!")
+        } else {
+            document.write("Ainda tá novinho! ;-)")
+        }
+
+</script>

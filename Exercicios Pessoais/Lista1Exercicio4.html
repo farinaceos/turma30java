@@ -1,0 +1,14 @@
+<script>
+    //Escreva  um sistema que leia três números inteiros e positivos (A, B, C) e calcule a seguinte expressão: D = (R + S)/2, onde R = (A + B)*(A + B) e S = (B + C)*(B + C)
+
+
+    var a = parseInt(prompt("Insira o valor de A"))
+    var b = parseInt(prompt("Insira o valor de B"))
+    var c = parseInt(prompt("Insira o valor de C"))
+
+    var r = (a + b)**2
+    var s = (b + c)**2
+    var d = (r + s)/2
+
+    document.write("Dados os valores de A = " + a + " B = " + b + " e C = " + c + "logo a equação para definir D = (R + S)/2 retornou o valor de D = " + d)
+</script>

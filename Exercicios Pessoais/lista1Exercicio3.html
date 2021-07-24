@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+
+//Faça um sistema que leia o tempo de duração de um evento em uma fábrica expressa em segundos e mostre-o expresso em horas, minutos e segundos.
+
+var evento = parseInt(prompt("Quantos segundos duraram o Evento?"))
+
+var horas = parseInt(evento/3600)
+var minutos = parseInt((evento%3600)/60)
+var segundos = parseInt((evento%3600)%60)
+document.write("INICIO DO CALCULO" + "<br><br>")
+document.write("O Evento em questão durou " + evento + " segundos." + "<br><br>")
+document.write("Isso dá um total de <br>")
+document.write(horas + " HORAS <br>")
+document.write(minutos + " MINUTOS<br>")
+document.write(segundos + " SEGUNDOS<br><br>")
+document.write("FIM DO CALCULO")
+
+
+</script>
