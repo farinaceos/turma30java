@@ -3,14 +3,43 @@
 
     
     var aluno = prompt("Insira o nome do Aluno")
+    if(aluno==""){
+            alert("*** ERRO ***" +" Nome do Aluno não Encontrado");
+            throw new Error("*** ERRO ***" +" Nome do Aluno não Encontrado");
+        }
     var nota1 = parseFloat(prompt("Qual o valor da Primeira Nota?")); // peso 2
+        if(nota1>10|| nota1<0){
+            alert("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10")
+            throw new Error("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10");
+        }
+        try{
+            parseInt(nota1);
+        }
+        catch(e){
+            alert("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10");
+            throw new Error("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10");
+        }
     var nota2 = parseFloat(prompt("Qual o valor da Segunda Nota?")); // peso 3
+        if(nota2>10|| nota2<0){
+            alert("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10")
+            throw new Error("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10");
+        }
     var nota3 = parseFloat(prompt("Qual o valor da Terceira Nota?")); // peso 5
-
+        if(nota3>10|| nota3<0){
+            alert("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10")
+            throw new Error("*** ERRO ***" +" Nota deve ser um valor numerico de 0 a 10");
+        }
     var mediaP = (nota1*2) + (nota2*3) + (nota3*5)
     var mediaP = mediaP/(2+3+5)
 
     alert("A Média Ponderada de " + aluno + " é " + mediaP)
+
+//        if(isNan(mediaP)){
+//            alert("Você inseriu algum valor errado, verifique e tente novamente");
+//            throw new Error("*** ERRO ***")
+
+//        } else 
+
         if(mediaP >= 6){
             alert("***APROVADO***")
         }else{
