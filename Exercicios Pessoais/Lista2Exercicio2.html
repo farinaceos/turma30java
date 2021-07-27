@@ -1,12 +1,18 @@
+<meta charset="UTF-8">
+
+FUNCIONÁRIO<input id="codigo" type="text"><br>
+HORAS TRABALHADAS<input id="number" type="text"><br>
+<button> CALCULAR </button><br><br>
+
 <script>
-
-
 //Elabore um sistema que leia as variáveis C e N, respectivamente código e número de
 //horas trabalhadas de um operário. E calcule o salário sabendo-se que ele ganha R$ 10,00
 //por hora. Quando o número de horas exceder a 50 calcule o excesso de pagamento
 //armazenando-o na variável E, caso contrário zerar tal variável. A hora excedente de
 //trabalho vale R$ 20,00. No final do processamento imprimir o salário total e o salário
 //excedente.
+var button = document.querySelector("button");
+	button.onclick = calcula;
 
 var codigo, numeroHoras, pagamento, pagamentoExtra;
 const salario = 10.00;
@@ -14,31 +20,31 @@ const salarioExtra = 20.00;
 const limiteHoras = 50
 var horasExtras;
 
-codigo = prompt("Informe o nome do Funcionário");
-numeroHoras = prompt("Informe o número de Horas trabalhadas!");
-
-if(numeroHoras>=limiteHoras){
-    horasExtras=numeroHoras-limiteHoras;
-    pagamento=limiteHoras*salario
-    pagamentoExtra = horasExtras*salarioExtra;
-    document.write("*** FOLHA DE PAGAMENTO ***<br><br>");
-    document.write("FUNCIONÁRIO :", codigo, "<br><br>");
-    document.write("HORAS BASE :", limiteHoras, "<br><br>");
-    document.write("HORAS EXTRAS :", horasExtras, "<br><br>");
-    document.write("SALARIO BASE: R$", pagamento, "<br><br>");
-    document.write("SALARIO EXTRA: R$", pagamentoExtra, "<br><br>");
-    document.write("TOTAL A RECEBER: R$", pagamentoExtra+pagamento, "<br><br>");
-}   else {
-    pagamento = salario*numeroHoras;
-    pagamentoExtra = 0;
-    horasExtras = 0
-    document.write("*** FOLHA DE PAGAMENTO ***<br><br>");
-    document.write("FUNCIONÁRIO :", codigo, "<br><br>");
-    document.write("HORAS BASE :", numeroHoras, "<br><br>");
-    document.write("HORAS EXTRAS :", horasExtras, "<br><br>");
-    document.write("SALARIO BASE: R$", pagamento, "<br><br>");
-    document.write("SALARIO EXTRA: R$", horasExtras*salarioExtra, "<br><br>");
-    document.write("TOTAL A RECEBER: R$", pagamentoExtra+pagamento, "<br><br>");
+function calcula(){//inicio da função de cálculo
+    numeroHoras = document.getElementById("number").value //pega o valor do Input "number" HORAS TRABALHADAS
+    codigo = document.getElementById("codigo").value
+    if(numeroHoras>=limiteHoras){
+        horasExtras=numeroHoras-limiteHoras;
+        pagamento=limiteHoras*salario
+        pagamentoExtra = horasExtras*salarioExtra;
+        document.write("*** FOLHA DE PAGAMENTO ***<br><br>");
+        document.write("FUNCIONÁRIO :", codigo, "<br><br>");
+        document.write("HORAS BASE :", limiteHoras, "<br><br>");
+        document.write("HORAS EXTRAS :", horasExtras, "<br><br>");
+        document.write("SALARIO BASE: R$", pagamento, "<br><br>");
+        document.write("SALARIO EXTRA: R$", pagamentoExtra, "<br><br>");
+        document.write("TOTAL A RECEBER: R$", pagamentoExtra+pagamento, "<br><br>");
+        }else {
+        pagamento = salario*numeroHoras;
+        pagamentoExtra = 0;
+        horasExtras = 0
+        document.write("*** FOLHA DE PAGAMENTO ***<br><br>");
+        document.write("FUNCIONÁRIO :", codigo, "<br><br>");
+        document.write("HORAS BASE :", numeroHoras, "<br><br>");
+        document.write("HORAS EXTRAS :", horasExtras, "<br><br>");
+        document.write("SALARIO BASE: R$", pagamento, "<br><br>");
+        document.write("SALARIO EXTRA: R$", horasExtras*salarioExtra, "<br><br>");
+        document.write("TOTAL A RECEBER: R$", pagamentoExtra+pagamento, "<br><br>");
+    }
 }
-
 </script>
