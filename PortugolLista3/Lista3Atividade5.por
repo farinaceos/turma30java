@@ -1,20 +1,23 @@
 programa
 {
+		//1- Faça um programa que mostre uma contagem na tela de 233 a 456,
+		//só que contando de 3 em 3 quando estiver entre 300 e 400 e de 5 em 5 quando não estiver.
+
 	
 	funcao inicio()
 	{
-		inteiro totalMultiplos4 =0
-		inteiro totalMultiplos7Impares = 0
-		para(inteiro x=1; x<=1000; x++){
-			se(x>=100 e x<=200 e(x%4)==0){
-			totalMultiplos4+=x	
-			escreva("\n")
+	inteiro contador = 233
+	
+	
+		faca{
+			escreva(contador, "\n")
+			se(contador>=300 e contador<=400){
+				contador+=3
+			}senao{
+				contador+=5
 			}
-			se((x%2)==1 e (x%7)==0 e x>=400 e x<=1000)
-			escreva(total		
-		
-		}
-		
+			
+		}enquanto(contador<=456)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -22,7 +25,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 299; 
+ * @POSICAO-CURSOR = 231; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
