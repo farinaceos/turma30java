@@ -1,0 +1,58 @@
+<h1> Laços Condicionais - Lista 2 - Exercício 3 </h1>
+<h2>Desenvolva um sistema em que:</h2>
+<h3> Leia 4 números;</h3>
+<h3> Calcule o quadrado de cada um;</h3>
+<h3> Se o valorm resultante do quadrado do terceiro for >= 1000, imprima-o e finalize;</h3>
+<h3> Caso contrário, imprima os valores lidos e seus respectivos quadrados.</h3>
+
+<h1> Escreva seus 4 números</h1>
+<input id="a" type="number">²<input id="b" type="number">²<input id="c" type="number">²<input id="d" type="number">²
+
+
+<button> RESULTADO </button>
+
+<script>
+
+/*/*
+ *  Desenvolva um sistema em que:
+    Leia 4 (quatro) números;
+    Calcule o quadrado de cada um;
+    Se o valor resultante do quadrado do terceiro for >= 1000, imprima-o e finalize;
+    Caso contrário, imprima os valores lidos e seus respectivos quadrados.
+ */
+
+var a, b, c, d;
+var a2, b2, c2, d2;
+
+
+function calcula(){
+    a = document.getElementById("a").value;
+    b = document.getElementById("b").value;
+    c = document.getElementById("c").value;
+    d = document.getElementById("d").value;
+    
+    a2 = (a*a);
+    b2 = (b*b);
+    c2 = (c*c);
+    d2 = (d*d);
+
+    if(a==0||b==0||c==0||d==0){
+        alert("*** NUMEROS NÃO PODEM SER 0! ***");
+        throw new Error("*** NUMEROS NÃO PODEM SER 0! ***");
+    }
+
+    if(c2>=1000){
+        document.write("<h2>O Quadrado de C é ", c2, "</h2><br>");
+        document.write("**********FIM DO PROGRAMA*********");
+    } else{
+        document.write("<h2>O Quadrado de A é ", a2, "</h2><br>");
+        document.write("<h2>O Quadrado de B é ", b2, "</h2><br>");
+        document.write("<h2>O Quadrado de C é ", c2, "</h2><br>");
+        document.write("<h2>O Quadrado de D é ", d2, "</h2><br>");
+        document.write("**********FIM DO PROGRAMA*********");
+    }
+}
+
+var button = document.querySelector("button");
+	button.onclick = calcula;
+</script>
