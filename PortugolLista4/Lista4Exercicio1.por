@@ -12,16 +12,16 @@ programa
 		inteiro maior =0
 		
 		para(inteiro x=0;x<vezes;x++){
-			escreva("INSIRA A PONTUAÇÃO : ")
+			escreva(" INSIRA A PONTUAÇÃO : ")
 			leia(pontos[x])
 			se(pontos[x]>maior){
 				maior=pontos[x] 
 			}
 		}
 		para(inteiro x=0;x<vezes;x++){
-			escreva("***O Valor da nota ", x+1, "   =   ", pontos[x], "  ***\n")
+			escreva("*** O Valor da nota ", x+1, "   =   ", pontos[x], "  ***\n")
 		}
-		escreva("*** A MAIOR NOTA FOI = ", maior, "  ***")
+		escreva("*** A MAIOR NOTA FOI    =   ", maior, "  ***")
 	
 		
 
@@ -32,7 +32,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 213; 
+ * @POSICAO-CURSOR = 572; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

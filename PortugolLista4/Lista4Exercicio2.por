@@ -11,7 +11,7 @@ programa
 	funcao inicio()
 	{
 		const inteiro vezes = 10
-		real jogadas[vezes]
+		inteiro jogadas[vezes]
 		real maior = 0.0
 		real contador = 1.0
 		real media
@@ -51,7 +51,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 869; 
+ * @POSICAO-CURSOR = 521; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
