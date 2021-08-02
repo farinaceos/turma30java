@@ -1,0 +1,91 @@
+<html>
+
+</html>
+<script>
+    var nomesMasc = [20]
+    var nomesFem = [20]
+    var dado
+    var rolagem = [20]
+    var soma = 0
+    var media = 0
+    var maior = 0
+    var menor = 20
+    var contadorMaior = 1
+    var contadorMenor = 1
+
+    nomesMasc[20] = "Aldor" 
+    nomesMasc[1] = "Aran"
+    nomesMasc[2] = "Jarad"
+    nomesMasc[3] = "Holdred"
+    nomesMasc[4] = "Khellus"
+    nomesMasc[5] = "Pelim"
+    nomesMasc[6] = "Nalan"
+    nomesMasc[7] = "Radan"
+    nomesMasc[8] = "Thedon"
+    nomesMasc[9] = "Thulin"
+    nomesMasc[10] = "Varn"
+    nomesMasc[11] = "Warin"
+    nomesMasc[12] = "Beren"
+    nomesMasc[13] = "Cyriac"
+    nomesMasc[14] = "Darik"
+    nomesMasc[15] = "Dravor"
+    nomesMasc[16] = "Drystan"
+    nomesMasc[17] = "Eldred"
+    nomesMasc[18] = "Ghart"
+    nomesMasc[19] = "Gryffen"
+    
+    nomesFem[0] = "Alysia"
+    nomesFem[1] = "Avelin"
+    nomesFem[2] = "Braya"
+    nomesFem[3] = "Catryn"
+    nomesFem[4] = "Darna"
+    nomesFem[5] = "Elenya"
+    nomesFem[6] = "Emeria"
+    nomesFem[7] = "Glenda"
+    nomesFem[8] = "Gylda"
+    nomesFem[9] = "Isolda"
+    nomesFem[10] = "Jeanne"
+    nomesFem[11] = "Kiara"
+    nomesFem[12] = "Kathelyn"
+    nomesFem[13] = "Linette"
+    nomesFem[14] = "Lora"
+    nomesFem[15] = "Malin"
+    nomesFem[16] = "Merewyn"
+    nomesFem[17] = "Rianna"
+    nomesFem[18] = "Tedwyn"
+    nomesFem[19] = "Tila"
+
+    dado= arredondarAleatorio(1,20)
+    document.write("<h1>",nomesMasc[dado],"</h1>")
+    dado= arredondarAleatorio(1,20)
+    document.write("<h1>",nomesFem[dado],"</h1>")
+
+        for(x=0;x<20;x++){
+            rolagem[x] = arredondarAleatorio(1,20)
+            document.write("O Resultado do dado ", (x+1), " foi de :", rolagem[x], "<br><br>")
+            soma+=rolagem[x]
+                if (rolagem[x]==maior){
+                    contadorMaior++
+                }
+                if(rolagem[x]>maior){
+                    maior=rolagem[x]
+                    contadorMaior=1
+                }
+                if(rolagem[x]==menor){
+                    contadorMenor++
+                }
+                if(rolagem[x]<menor){
+                    menor=rolagem[x]
+                    contadorMenor=1
+                }
+                
+        }
+media = Math.round(soma/20,2)
+document.write("<h1> A media das rolagens foi de " ,media ,"</h1>")
+document.write("<h1> O maior resultado foi " ,maior ," e ele saiu um total de ",contadorMaior," vezes!</h1>")
+document.write("<h1> O menor resultado foi " ,menor ," e ele saiu um total de ",contadorMenor," vezes!</h1>")
+
+function arredondarAleatorio(min,max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+}
+</script>
