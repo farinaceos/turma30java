@@ -1,4 +1,4 @@
-package Lista3;
+package lista3;
 
 public class Lista3Exercicio1 {
 	/*
