@@ -48,36 +48,36 @@ public class ConversaoPortugol {
 		int formaDePagamento;
 
 		for (int x = 0; x < 10; x++) {
-			CODIGO[x] = ("g1" + (x + 1));
+			CODIGO[x] = ("G1" + (x + 1));
 		}
 		for (int x = 0; x < 10; x++) {
 			ESTOQUE[x] = 10;
 		}
-		VALOR[0] = 4500.0;
-		VALOR[1] = 4300.0;
-		VALOR[2] = 2700.0;
-		VALOR[3] = 2500.0;
-		VALOR[4] = 1200.0;
-		VALOR[5] = 250.0;
-		VALOR[6] = 270.0;
-		VALOR[7] = 300.0;
-		VALOR[8] = 350.0;
-		VALOR[9] = 1100.0;
+		VALOR[0] = 10.0;
+		VALOR[1] = 10.0;
+		VALOR[2] = 10.0;
+		VALOR[3] = 10.0;
+		VALOR[4] = 10.0;
+		VALOR[5] = 10.0;
+		VALOR[6] = 10.0;
+		VALOR[7] = 10.0;
+		VALOR[8] = 10.0;
+		VALOR[9] = 10.0;
 
-		PRODUTO[0] = "PLAYSTATION 5";
-		PRODUTO[1] = "XBOX SERIES X";
-		PRODUTO[2] = "XBOX SERIES S";
-		PRODUTO[3] = "NTDO SWITCH";
-		PRODUTO[4] = "NTDO NEW 3DS";
-		PRODUTO[5] = "JOGO XBOX";
-		PRODUTO[6] = "JOGO PS5";
-		PRODUTO[7] = "JOGO NTDO";
-		PRODUTO[8] = "ACESSÓRIO NTDO";
-		PRODUTO[9] = "PSTATION VITA";
+		PRODUTO[0] = "DONNUT A";
+		PRODUTO[1] = "DONNUT B";
+		PRODUTO[2] = "DONNUT C";
+		PRODUTO[3] = "DONNUT D";
+		PRODUTO[4] = "DONNUT E";
+		PRODUTO[5] = "DONNUT F";
+		PRODUTO[6] = "DONNUT G";
+		PRODUTO[7] = "DONNUT H";
+		PRODUTO[8] = "DONNUT I";
+		PRODUTO[9] = "DONNUT J";
 
-		while (sn == 'S') {
-			System.out.println("*** FARINACEOS STORE ***");
-			System.out.println("~ a Channel Farinaceos Company ~");
+		do{
+			System.out.println("*** DONNUTIX ***");
+			System.out.println("~ Seu Donnut, nosso Mix ~");
 			System.out.println("Deseja fazer compras?");
 			sn = leia.next().toUpperCase().charAt(0);
 			if (sn == 'S') {
@@ -86,17 +86,45 @@ public class ConversaoPortugol {
 				System.out.println();
 				System.out.println();
 				System.out.println();
-				System.out.println("*** FARINACEOS STORE ***");
-				System.out.println("~ a Channel Farinaceos Company ~");
+				System.out.println("*** DONNUTIX ***");
+				System.out.println("~ Seu Donnut, nosso Mix ~");
 				System.out.println("***** VITRINE ******");
 				for (int x = 0; x < 10; x++) {
 					System.out.printf("%s\t\t%s\t\t%.2f\t\t%d\n", CODIGO[x], PRODUTO[x], VALOR[x], ESTOQUE[x]);
 				}
+				/*INFORME O CODIGO
+				 *xxx 
+				 *faca{
+						 *Informe quantidade
+						 *confirma quantidade
+						 * 	 if (sn == 's')
+							 * 	if- qtde>0 && qtde <=estoque
+							 * 		bota no carrinho
+							 * 		retira qtde do estoque
+							 * 		pergunta se quer comprar de novo
+							 * 		
+							 * 	else -qtde indisponivel
+						*sn = 'S'
+						*
+				 *enquanto(sn=='S')
+				 *
+				 *
+				 *
+				 ************************PAULO**************************
+				 *calcular valor e informar mostra formas de pagamento
+				 *mostra carrinho
+				 *qtde*preco
+				 *valor final -
+				 *calcula imposto = (valor final *imposto)
+				 *pgt vista (desconto)
+				 *pgt cartao (10%)
+				 *pgt parcelado (15% - mostrar cada parcela)
+				 */
 
 			} else {
 				System.out.println("Até Breve!");
 			}
-		}
+		}while(sn=='S');
 
 	}
 }
