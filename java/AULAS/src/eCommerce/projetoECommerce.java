@@ -25,7 +25,7 @@ public class projetoECommerce {
 		double valorFECHADO;
 		String y = "grupo1";
 		int formaDePagamento;
-		int carrinhoVazio = 0; // ESSA VARIÁVEL VAMOS UTILIZAR PARA INFORMAR QUE O CARRINHO AINDA ESTA VAZIO
+		int carrinhoVazio = 0; 
 		char auxNota = 'N'; //Variavel para finalizar o loop de verificação de escolha de forma de pagamento
 		
 		// PREENCHENDO VETORES DE CODIGO E ESTOQUE

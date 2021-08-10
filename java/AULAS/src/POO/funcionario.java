@@ -1,4 +1,4 @@
-package poo;
+package POO;
 
 public class funcionario {
 
