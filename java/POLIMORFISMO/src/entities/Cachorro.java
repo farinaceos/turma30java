@@ -1,30 +1,32 @@
 package entities;
 
-public class Cachorro extends Pet{
-	private boolean latidoAlto;
+public class Cachorro extends Animal {
 
-	public Cachorro(String raca, boolean latidoAlto) {
-		super(raca);
-		this.latidoAlto = latidoAlto;
+	private boolean corre;
+
+	public Cachorro(String nome, int idade, boolean emiteSom, boolean corre) {
+		super(nome, idade, emiteSom);
+		this.corre = corre;
 	}
 
-	public Cachorro(String raca, int anoNascimento, boolean latidoAlto) {
-		super(raca, anoNascimento);
-		this.latidoAlto = latidoAlto;
+	public boolean isCorre() {
+		return corre;
 	}
 
-	public boolean isLatidoAlto() {
-		return latidoAlto;
-	}
-
-	public void setLatidoAlto(boolean latidoAlto) {
-		this.latidoAlto = latidoAlto;
+	public void setCorre(boolean corre) {
+		this.corre = corre;
 	}
 	
 	@Override
-	public void emiteSom() {
-		System.out.println("WOOF!!!");
+	public void somAnimal() {
+		if(super.isEmiteSom()==false) {
+			System.out.println("O doguinho até tenta...");
+			System.out.println("Mas nenhum som é emitido!");
+		}else {
+			System.out.println("WOOF! WOOF! WOOF! WOOF! WOOF!");	
+		}
+		
+		
 	}
-}
 
-//Cachorro - pet - latidoAlto / verdadeiro ou falso - boolean - construtor
+}

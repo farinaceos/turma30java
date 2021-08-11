@@ -1,14 +1,27 @@
 package programs;
 
-import entities.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CadLoja {
 
 	public static void main(String[] args) {
 
-		Produto prod1 = new Produto("G1001","Donnut de Morango", 9.00, 10);
+
+		List<String> cadastro = new ArrayList<>();
 		
-		prod1.incluiEstoque(-1);
+		cadastro.add("Donnut");
+		cadastro.add("Sonho");
+		cadastro.add("Coxinha");
+		cadastro.add("Cannoli");
+		cadastro.add("Bolinho de Chuva");
+		
+		for(String doce : cadastro) {
+			System.out.println((cadastro.indexOf(doce)+1) + " " + doce);
+		}
+		
+		
+		
 		
 	}
 

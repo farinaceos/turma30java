@@ -1,4 +1,4 @@
-package herança;
+package entities;
 
 public class Cavalo extends Animal {
 
@@ -17,4 +17,13 @@ public class Cavalo extends Animal {
 		this.corre = corre;
 	}
 
+	@Override
+	public void somAnimal() {
+		if (super.isEmiteSom() == false) {
+			System.out.println("O cavalo se esforça...");
+			System.out.println("Mas nenhum som é emitido!");
+		} else {
+			System.out.println("IIIIIRIRIRHHHH!!! POCOTÓ!!!");
+		}
+	}
 }

@@ -1,4 +1,4 @@
-package herança;
+package entities;
 
 public class Animal {
 
@@ -42,4 +42,8 @@ public class Animal {
 		this.emiteSom = emiteSom;
 	}
 
+	public void somAnimal() {
+		System.out.println("O ANIMAL EMITE SOM! PRU PRU!");
+	}
+	
 }

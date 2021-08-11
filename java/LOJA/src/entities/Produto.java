@@ -53,10 +53,6 @@ public class Produto {
 		return estoque;
 	}
 
-	public void setEstoque(int estoque) {
-		this.estoque = estoque;
-	}
-
 	public void retiraEstoque(int decremento) {
 		if (decremento > this.estoque) {
 			System.out.println("QUANTIDADE INDISPONÍVEL");
