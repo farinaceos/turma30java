@@ -40,4 +40,6 @@ SELECT * FROM tb_funcionaries where salario<2000;
 USE db_rh;
 
 UPDATE tb_funcionaries set salario = 0.0 
-	where id = 3
+	where id = 3;
+
+SET SQL_SAFE_UPDATES = 0;
