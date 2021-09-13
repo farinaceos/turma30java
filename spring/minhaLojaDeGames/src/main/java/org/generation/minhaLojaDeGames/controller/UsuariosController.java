@@ -1,9 +1,12 @@
 package org.generation.minhaLojaDeGames.controller;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.generation.minhaLojaDeGames.model.UserLogin;
 import org.generation.minhaLojaDeGames.model.Usuarios;
 import org.generation.minhaLojaDeGames.repository.UsuarioRepository;
+import org.generation.minhaLojaDeGames.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +22,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuariosController {
+	
+	
+	@Autowired
+	private UsuarioService usuarioService;
+	
+	@PostMapping("/logar")
+	public ResponseEntity<UserLogin> Autentication(@RequestBody Optional<UserLogin> user){
+		return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+	}
+	
+	@PostMapping("/cadastrar")
+	public ResponseEntity<Usuarios> Post(@RequestBody Usuarios usuario){
+		return usuarioService.CadastrarUsuario(usuario).map(resp -> ResponseEntity.status(HttpStatus.CREATED).body(resp))
+				.orElse(ResponseEntity.status(HttpStatus.CONFLICT).build());
+	}
 	
 	@Autowired
 	private UsuarioRepository repository;
