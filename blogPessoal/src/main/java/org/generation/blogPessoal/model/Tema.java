@@ -40,7 +40,7 @@ public class Tema {
 		return descricao;
 	}
 
-	public void setDescicao(String descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
